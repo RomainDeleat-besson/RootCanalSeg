@@ -31,7 +31,7 @@ RUN pip3 install tensorflow Pillow
 
 # Copy of the requiered files
 WORKDIR /app/src
-COPY code/UpperLowerJawModel_1_30.hdf5 .
+RUN wget https://github.com/RomainUSA/RootCanalSeg/releases/download/v0.1/UpperLowerJawModel_1_30.hdf5 .
 RUN mkdir scan
 
 WORKDIR /app/src/RootCanal
